@@ -14,6 +14,6 @@ connectToDb();
 
 //Routes
 const userRouter = require("./routes/userRoutes");
-app.use('/', userRouter)
+app.use(userRouter)
 
 module.exports = app;
