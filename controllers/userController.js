@@ -7,9 +7,10 @@ exports.home = (req, res) => {
 };
 
 exports.createUser = async (req, res) => {
-  //extract user
   try {
+    //extract user
     const { name, email } = req.body;
+    // create User
     const user = await User.create({ name: name, email: email });
     res.status(201).json({
       user: user,
